@@ -8,7 +8,7 @@ function Search({ setUser, setErrText, setIsLoading }) {
   useEffect(() => {
     setIsLoading(true)
     const fetchData = async () => {
-      const response = await fetch(`https://bio.torre.co/api/bios/${searchText}`)
+      const response = await fetch(`http://localhost:1234/proxy/${searchText}`)
       const data = await response.json()
       if (response.status === 200) {
         setUser(data)
