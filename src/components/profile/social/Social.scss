@@ -1,0 +1,16 @@
+.social{
+  display: flex;
+  margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .social__link{
+    color: white;
+
+    i{
+      font-size: 20px;
+      margin: 0 10px ;
+    }
+  }
+}

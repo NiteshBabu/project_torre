@@ -12,7 +12,7 @@ export default function ProfilePage() {
   const [ErrText, setErrText] = useState(null)
 
   return (
-    <div className="container">
+    <div className="profile-page mx-auto">
       <Search 
         setIsLoading={setIsLoading}
         setUser={setUser}
