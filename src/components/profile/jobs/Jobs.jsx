@@ -12,7 +12,7 @@ function Jobs({ jobs }) {
               {job.organizations.map(o => {
                 return (
                   <div className="organisation d-flex my-1 p-1 justify-content-between align-items-center text-light" key={o.id}>
-                    <img src={o.picture} style={{width : "30px", height : "30px", borderRadius : "50%"}} />
+                    <img src={o.picture} style={{width : "30px", height : "30px", borderRadius : "50%"}} alt="company"/>
                     <small className="fw-bold">{o.name}</small>
                     <small>From - {`${job.fromMonth}-${job.fromYear}`}</small>
                   </div>
