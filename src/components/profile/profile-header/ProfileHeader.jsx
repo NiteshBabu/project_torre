@@ -4,7 +4,7 @@ import ProfilePic from '../profile-pic/ProfilePic'
 
 function ProfileHeader({ person }) {
   return (
-    <div className="profile row col-sm-12 col-md-4 px-4 hide-scroll overflow-scroll card">
+    <div className="profile row col-sm-12 col-md-4 hide-scroll overflow-scroll card">
       <div className="col-sm-12">
         {
           person.picture ?

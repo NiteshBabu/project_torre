@@ -2,44 +2,71 @@
 
 .body{
   box-sizing: border-box;
-  background-color: #ddd;
   overflow : hidden;
 }
 
 h2,h3,h4,h5{
-  color : white;
+  color : $primary;
+}
+h1{
+  font-size: 35px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 15px;
+}
+h5{
+  font-size: 13px;
 }
 
 .main-container {
+  font-family: cursive;
+  background: #27292d;
   min-height: 100vh;
   width : 100%;
 }
 
 .hide-scroll{
-   -ms-overflow-style: none;
-   scrollbar-width: none;
+  //  -ms-overflow-style: none;
+  //  scrollbar-width: none;
 }
 
 .title{
   color : $title;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .card {
-  background: $background;
+  background: $card-background;
   text-decoration: none;
-  padding : 10px;
-  color: #444;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width : 28em;
+  max-height : 70vh;
+  margin : 1em 1.5em 0 1.5em;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  border-radius: 13px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  
+  
   // sets up hover state
   position: relative;
   top: 0;
   transition: all .1s ease-in;
-
+  
   &:hover {
+    box-shadow: 5px 5px 11px #1a1b1e,
+    -5px -5px 11px #34373c;
     top: -25px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   }
+}
+
+#heart{
+  color : crimson;
 }
