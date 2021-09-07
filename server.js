@@ -12,8 +12,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "/public")));
 
 // proxy to bypass the api request from here
-app.use("/proxy", function (req, res) {
-	let url = config.apiUrl + req.url;
+app.use("/proxy/bios", function (req, res) {
+	let url = config.apiUrlBios + req.url;
+	req.pipe(request({ uri: url })).pipe(res);
+});
+app.use("/proxy/jobs", function (req, res) {
+	let url = config.apiUrlJobs + req.url;
 	req.pipe(request({ uri: url })).pipe(res);
 });
 
