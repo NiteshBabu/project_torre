@@ -1,0 +1,44 @@
+$small : 700px;
+
+
+.home-btn-container{
+  display : flex;
+  height: 80vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.home-btn{
+  width : 10em;
+  height : 10em;
+  border-radius: 10em;
+  font-size: 30px;
+  transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+  letter-spacing: 1px;
+  background-color: wheat;
+  color : chocolate;
+  border: none;
+  
+  &:hover{
+    scale : 1.1;
+    opacity : .8;
+  }
+}
+
+@media screen and (max-width : $small){
+  .home-btn-container{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-btn{
+    width : 10em;
+    height :  10em;
+    font-size: 15px;
+    border-radius: 5em;
+  }
+}
