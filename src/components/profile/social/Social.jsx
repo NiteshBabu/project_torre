@@ -9,7 +9,7 @@ function Social({ links }) {
         {
           links.map(link => {
             return (
-            <a href={link.address} key={link.id} className="social__link">
+            <a href={link.address} target="_blank" key={link.id} className="social__link">
               <i className={`bi bi-${link.name ? link.name : "link"}`}></i>
             </a>)
           })
