@@ -6,7 +6,7 @@ function Search({ callback, url, setErrText, setIsLoading }) {
 
   const [searchText, setSearchText] = useState("Niteshbabusharma")
   useEffect(() => {
-    // setIsLoading(true)
+    setIsLoading(true)
     const fetchData = async () => {
       const response = await fetch(`${url}/${searchText}`)
       const data = await response.json()
