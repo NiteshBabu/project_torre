@@ -8,8 +8,9 @@ const port = config.port;
 
 // use cors for cors handling
 app.use(cors());
+
 // set path for static files
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/build")));
 
 // proxy to bypass the api request from here
 app.use("/proxy/bios", function (req, res) {
@@ -21,8 +22,8 @@ app.use("/proxy/jobs", function (req, res) {
 	req.pipe(request({ uri: url })).pipe(res);
 });
 
-app.get("/", function (req, res) {
-	res.render("index.html");
+app.get("/*", function (req, res) {
+	res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(port, () => {
