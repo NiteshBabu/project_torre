@@ -12,6 +12,8 @@ export default function ProfilePage({IsLoading, setIsLoading, ErrText, setErrTex
   return (
     <div className="profile-page mx-auto">
       <Search 
+        defaultParam="Niteshbabusharma"
+        type="Username"
         setIsLoading={setIsLoading}
         url="http://localhost:1234/proxy/bios"
         callback={setUser}
