@@ -6,19 +6,18 @@ import Search from '../../components/search/Search'
 import "./profilePage.scss"
 
 
-export default function ProfilePage() {
-  const [IsLoading, setIsLoading] = useState(false)
+export default function ProfilePage({IsLoading, setIsLoading, ErrText, setErrText}) {
   const [User, setUser] = useState(null)
-  const [ErrText, setErrText] = useState(null)
 
   return (
     <div className="profile-page mx-auto">
       <Search 
         setIsLoading={setIsLoading}
-        setUser={setUser}
+        url="http://localhost:1234/proxy/bios"
+        callback={setUser}
         setErrText={setErrText}
        />
-      { ErrText && <ErrorComponent />}
+      { ErrText && <ErrorComponent text={ErrText} />}
       {
         IsLoading ? <LoadingIcon /> : User && <Profile user={User} />
       }

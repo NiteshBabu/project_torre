@@ -1,5 +1,5 @@
 let config = {
-    apiUrl: "https://bio.torre.co/api/bios",
+    apiUrl: "https://bio.torre.co/api/",
     port: 1234,
 }
 

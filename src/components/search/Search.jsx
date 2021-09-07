@@ -2,22 +2,21 @@ import React, { useState, useEffect } from 'react'
 import SearchIcon from '../../icons/SearchIcon'
 import "./Search.scss"
 
-function Search({ setUser, setErrText, setIsLoading }) {
+function Search({ callback, url, setErrText, setIsLoading }) {
 
   const [searchText, setSearchText] = useState("Niteshbabusharma")
-
   useEffect(() => {
-    setIsLoading(true)
+    // setIsLoading(true)
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:1234/proxy/${searchText}`)
+      const response = await fetch(`${url}/${searchText}`)
       const data = await response.json()
       if (response.status === 200) {
-        setUser(data)
+        callback(data)
         setErrText(null)
         setIsLoading(false)
       }
       else {
-        setUser(null)
+        callback(null)
         setErrText(data.message)
         setIsLoading(false)
       }

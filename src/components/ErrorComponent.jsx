@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ErrorComponent() {
+function ErrorComponent({text}) {
   return (
     <div class="text-danger text-center" >
-      <p className="h5">Oops..Not Found, Please Check Username</p>
+      <p className="h5">{text}</p>
     </div>
   )
 }

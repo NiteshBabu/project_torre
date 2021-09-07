@@ -5,14 +5,37 @@ import ProfilePage from "./pages/profile-page/profilePage";
 import Home from "./pages/home-page/HomePage";
 import JobsPage from "./pages/jobs-page/JobsPage";
 
-function Routes() {
+function Routes({IsLoading, setIsLoading, ErrText, setErrText}) {
+
   return (
-      <Switch>
-        <Route path="/profile" exact component={ProfilePage} />
-        <Route path="/jobs" exact component={JobsPage} />
-        <Route path="/" exact component={Home} />
-      </Switch>
-    )
+		<Switch>
+			<Route
+				path='/profile'
+				exact
+        render={
+          () => <ProfilePage 
+          IsLoading={IsLoading}
+          setIsLoading={setIsLoading}
+          ErrText={ErrText}
+          setErrText={setErrText}
+          />
+        }
+        />
+			<Route
+				path='/jobs'
+				exact
+        render={
+          () => <JobsPage 
+          IsLoading={IsLoading}
+          setIsLoading={setIsLoading}
+          ErrText={ErrText}
+          setErrText={setErrText}
+          />
+        }
+			/>
+			<Route path='/' exact component={Home} />
+		</Switch>
+	);
 }
 
 export default Routes
