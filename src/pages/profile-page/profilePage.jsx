@@ -5,7 +5,6 @@ import Profile from '../../components/profile/Profile'
 import Search from '../../components/search/Search'
 import "./profilePage.scss"
 
-
 export default function ProfilePage({IsLoading, setIsLoading, ErrText, setErrText}) {
   const [User, setUser] = useState(null)
 
@@ -15,7 +14,7 @@ export default function ProfilePage({IsLoading, setIsLoading, ErrText, setErrTex
         defaultParam="Niteshbabusharma"
         type="Username"
         setIsLoading={setIsLoading}
-        url="http://localhost:1234/proxy/bios"
+        url="/proxy/bios"
         callback={setUser}
         setErrText={setErrText}
        />

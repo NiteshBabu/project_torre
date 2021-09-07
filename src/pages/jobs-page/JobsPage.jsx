@@ -13,7 +13,7 @@ function JobsPage({ IsLoading, setIsLoading, ErrText, setErrText}) {
         defaultParam="PW90Gvpr"
         type="JobId"
         setIsLoading={setIsLoading}
-        url="http://localhost:1234/proxy/jobs"
+        url="/proxy/jobs"
         callback={setJob}
         setErrText={setErrText}
       />
